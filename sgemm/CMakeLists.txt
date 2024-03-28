@@ -1,0 +1,1 @@
+add_cuda_executable(sgemm_v1 sgemm_v1.cu)
