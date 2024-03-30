@@ -13,16 +13,6 @@
 // float4 transfer
 #define FETCH_FLOAT4(pointer) (reinterpret_cast<float4*>(&(pointer))[0])
 
-#define CHECK_CUDA_ERRORS(func)                                 \
-  do {                                                          \
-    cudaError_t err = (func);                                   \
-    if (err != cudaSuccess) {                                   \
-      printf("%s %d CUDA error: %s (%d)\n", __FILE__, __LINE__, \
-             cudaGetErrorString(err), err);                     \
-      exit(1);                                                  \
-    }                                                           \
-  } while (false)
-
 template <
     const int BLOCK_SIZE_M,  // height of block of C that each thread block
                              // computes

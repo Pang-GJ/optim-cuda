@@ -1,0 +1,1 @@
+add_cuda_executable(l2cache_bandwidth l2cache_bandwidth.cu)
